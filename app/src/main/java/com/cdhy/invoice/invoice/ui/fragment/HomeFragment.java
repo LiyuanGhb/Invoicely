@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     public static final int UPDATE_COMPANY = 2;//更新公司标识符
     public static final int NOT_FUNCTION = 3;//无任何操作
     PopupWindow popupWindow;
-//侧事故
+//侧事故啊实打实大
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
