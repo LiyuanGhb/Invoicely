@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RadioGroup
+        android:id="@+id/nav_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@mipmap/home_page"
+            android:text="@string/Bottom_Home"
+            android:textColor="@color/gray"
+            android:button="@null"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/nav_invoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@mipmap/fpgl"
+            android:text="@string/Bottom_Invoice"
+            android:textColor="@color/gray"
+            android:button="@null"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/nav_company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@mipmap/company"
+            android:text="@string/Bottom_Company"
+            android:textColor="@color/gray"
+            android:button="@null"
+            android:gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/nav_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@mipmap/info"
+            android:text="@string/Bottom_Info"
+            android:textColor="@color/gray"
+            android:button="@null"
+            android:gravity="center"
+            />
+
+    </RadioGroup>
+</layout>
