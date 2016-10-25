@@ -1,60 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.cdhy.invoice.invoice">
+    package="com.dzfp.dzfp">
 
     <!-- 照相 -->
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".CustomApplication"
+        android:name="com.dzfp.dzfp.CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ico"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.activity.GuideAty">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name="com.dzfp.dzfp.ui.activity.GuideAty"
+            android:screenOrientation="portrait"    >
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity android:name=".ui.activity.MainAty"/>
-        <activity android:name=".ui.activity.PasswordLoginAty"/>
-        <activity android:name=".ui.activity.DescribeAty"/>
-        <activity android:name=".ui.activity.CurrentActivity"/>
-        <activity android:name=".ui.activity.UserMessageAty"/>
-        <activity android:name=".ui.activity.WelcomeAty"/>
-        <activity android:name=".ui.activity.UpdateCompanyAty"/>
-        <activity android:name=".ui.activity.RegisterAty"/>
-        <activity android:name=".ui.activity.ResetPasswordAty"/>
-        <activity android:name=".ui.activity.CodeLoginAty"/>
-        <activity android:name=".ui.activity.SetIpActivity"/>
-        <activity android:name=".ui.activity.SetComActivity"/>
-        <activity android:name="scanner.CaptureActivity"/>
-        <activity android:name=".ui.activity.AccreditationActivity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.MainAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.PasswordLoginAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.DescribeAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.CurrentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.UserMessageAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.WelcomeAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.UpdateCompanyAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.RegisterAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.ResetPasswordAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.CodeLoginAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.SetIpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.SetComActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="scanner.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.AccreditationActivity"
+            android:screenOrientation="portrait" />
         <!--申请入企业-->
-        <activity android:name=".ui.activity.AuthComActivity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.AuthComActivity"
+            android:screenOrientation="portrait" />
         <!--是否是默认审核-->
-        <activity android:name=".ui.activity.IsChekedActivity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.IsChekedActivity"
+            android:screenOrientation="portrait" />
         <!--审核-->
-        <activity android:name=".ui.activity.ChecktoComActyity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.ChecktoComActyity"
+            android:screenOrientation="portrait" />
         <!--转让-->
-        <activity android:name=".ui.activity.MakeOverActivity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.MakeOverActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.activity.SetCompanyActivity"/>
+        <activity
+            android:name="com.dzfp.dzfp.ui.activity.SetCompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzfp.dzfp.ui.BaseActivity"
+            android:screenOrientation="portrait">
 
+        </activity>
+        <activity
+            android:name=".ui.activity.AddProcessActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.ReimburseActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.SelectPeopleActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.ResmentApplicationActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.GetComInvoiceActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.CurrentInfoActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.SPXQActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>

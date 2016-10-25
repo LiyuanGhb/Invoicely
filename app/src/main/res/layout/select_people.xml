@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/select_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/appColor">
+
+            <RelativeLayout
+                android:id="@+id/select_back"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_bg"
+                android:onClick="@{onClickListener}">
+
+                <ImageView
+                    android:id="@+id/iv_back_checktocom"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/back"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="公司员工"
+                android:textColor="@color/bg_White"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/select_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+</layout>

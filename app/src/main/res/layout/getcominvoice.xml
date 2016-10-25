@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="onCliclistener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/re_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/appColor"
+            android:onClick="@{onCliclistener}">
+
+            <RelativeLayout
+                android:id="@+id/rl_back_cominvoice"
+                android:layout_width="70dp"
+                android:onClick="@{onCliclistener}"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_bg">
+
+                <ImageView
+                    android:id="@+id/iv_back_cominvoice"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/current_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="添加报销发票"
+                android:textColor="@color/bg_White"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/fapiaohaoma_edit_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextboild"
+            android:paddingLeft="5dp"
+            android:hint="请输入发票号码"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/fapiaodaima_edit_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/edittextboild"
+            android:paddingLeft="5dp"
+            android:hint="请输入发票代码"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/baoxiao_button_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonblue"
+            android:onClick="@{onCliclistener}"
+            android:text="我要报销"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</layout>

@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.cdhy.invoice.invoice.ui.custom.CustomContain
+        <com.dzfp.dzfp.ui.custom.CustomContain
             android:id="@+id/cpy_bxsq_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             app:setLeftBackground="@mipmap/bxsq"
             app:setTitleDescribe="报销申请"/>
 
-        <com.cdhy.invoice.invoice.ui.custom.CustomContain
+        <com.dzfp.dzfp.ui.custom.CustomContain
             android:id="@+id/cpy_bxsp_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             app:setLeftBackground="@mipmap/bxsp"
             app:setTitleDescribe="报销审评"/>
 
-        <com.cdhy.invoice.invoice.ui.custom.CustomContain
+        <com.dzfp.dzfp.ui.custom.CustomContain
             android:id="@+id/cpy_qyfp_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             app:setLeftBackground="@mipmap/qyfp"
             app:setTitleDescribe="企业发票"/>
 
-        <com.cdhy.invoice.invoice.ui.custom.CustomContain
+        <com.dzfp.dzfp.ui.custom.CustomContain
             android:id="@+id/cpy_rysh_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             app:setLeftBackground="@mipmap/bxsp"
             app:setTitleDescribe="入企申请"/>
 
-        <com.cdhy.invoice.invoice.ui.custom.CustomContain
+        <com.dzfp.dzfp.ui.custom.CustomContain
             android:id="@+id/cpy_gnsz_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

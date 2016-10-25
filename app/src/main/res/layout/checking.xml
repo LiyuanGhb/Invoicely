@@ -3,7 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
+    <TextView
+        android:id="@+id/checking_ly"
+        android:layout_below="@+id/checking_phone"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="1111111" />
     <TextView
         android:id="@+id/checking_name"
         android:layout_width="wrap_content"

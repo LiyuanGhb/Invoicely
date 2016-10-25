@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ap_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/appColor">
+
+            <RelativeLayout
+                android:id="@+id/ap_back"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_bg"
+                android:onClick="@{onClickListener}">
+
+                <ImageView
+                    android:id="@+id/ap_title"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/back"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="创建报销流程"
+                android:textColor="@color/bg_White"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ap_addProcessName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/edittextboild"
+            android:paddingLeft="5dp"
+            android:hint="请添加报销流程名称"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="点击图标可删除"/>
+
+        <GridView
+            android:id="@+id/ap_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:horizontalSpacing="10dp"
+            android:numColumns="5"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"
+            />
+
+        <Button
+            android:id="@+id/ap_sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonblue"
+            android:text="确    认    添    加"
+            android:onClick="@{onClickListener}"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</layout>

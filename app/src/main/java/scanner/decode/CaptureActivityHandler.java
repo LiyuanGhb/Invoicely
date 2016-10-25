@@ -30,7 +30,7 @@ import android.os.Message;
 import android.provider.Browser;
 import android.util.Log;
 
-import com.cdhy.invoice.invoice.R;
+import com.dzfp.dzfp.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.Result;

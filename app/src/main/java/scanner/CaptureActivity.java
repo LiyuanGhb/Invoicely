@@ -1,6 +1,5 @@
 package scanner;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ContentUris;
@@ -32,11 +31,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cdhy.invoice.invoice.CustomApplication;
-import com.cdhy.invoice.invoice.QRUtil;
-import com.cdhy.invoice.invoice.R;
-import com.cdhy.invoice.invoice.TcpClient;
-import com.cdhy.invoice.invoice.ui.util.DialogHb;
+import com.dzfp.dzfp.CustomApplication;
+import com.dzfp.dzfp.QRUtil;
+import com.dzfp.dzfp.R;
+import com.dzfp.dzfp.TcpClient;
+import com.dzfp.dzfp.ui.BaseActivity;
+import com.dzfp.dzfp.ui.util.DialogHb;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -53,6 +53,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Map;
@@ -76,7 +77,7 @@ import scanner.view.ViewfinderView;
  */
 
 
-public final class CaptureActivity extends Activity implements
+public final class CaptureActivity extends BaseActivity implements
         SurfaceHolder.Callback {
     private static final int REQUEST_CODE = 107;
     private static final int PARSE_BARCODE_SUC = 302;
@@ -251,7 +252,7 @@ public final class CaptureActivity extends Activity implements
             }
         });
         intent = getIntent();
-        what = intent.getIntExtra("what",0);
+        what = intent.getIntExtra("what", 0);
     }
 
     @Override
@@ -413,10 +414,10 @@ public final class CaptureActivity extends Activity implements
 
         String content = "";
         try {
-            content = new String(result.getBytes("ISO-8859-1"), "GB2312");
+            content = new String(result.getBytes("ISO-8859-1"), "utf-8");
             switch (CURRENT_COUNT) {
                 case 1:
-                    intetns(content);
+                    intetns(result);
                     //   finish();
                     break;
                 case 2:
@@ -725,15 +726,86 @@ public final class CaptureActivity extends Activity implements
     }
 
     public void intetns(final String content) {
-            if (what ==inquiry) {
-                finish();
-            } else if (what==Billing) {
+        if (what == inquiry) {
+            finish();
+        } else if (what == Billing) {
               /*  Intent intent = new Intent(CaptureActivity.this, OpenInoviceActivity.class);
                 intent.putExtra("content", content);
                 startActivity(intent);*/
-                finish();
-            } else if (what ==QuickOpen) {
-                String rever = content;
+            finish();
+        } else if (what == QuickOpen) {
+            String rever = content;
+            if (content.contains("AALIPAY") && content.contains("→") && content.substring(0, 3).equals("\uFEFF11")) {
+                int names, nsrs, addresss, phones, khhs, yhzhs, keys;
+                names = rever.indexOf("→");
+                String name = rever.substring(3, names);
+                rever = rever.substring(names + 1, rever.length());
+                nsrs = rever.indexOf("→");
+                String nsrsbh = rever.substring(1, nsrs);
+                rever = rever.substring(nsrs + 1, rever.length());
+                addresss = rever.indexOf(" ");
+                if (addresss < 0) {
+                    final String url = QRUtil.createString(
+                            "",
+                            "",
+                            name,
+                            nsrsbh,
+                            "",
+                            "",
+                            "",
+                            ""
+                    );
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String s = TcpClient.tcp(url, CustomApplication.ip);
+                            Message message = new Message();
+                            message.obj = s;
+                            handlers.sendMessage(message);
+                            //發送請求在這裡
+                        }
+                    }).start();
+                } else {
+                    String address = rever.substring(1, addresss);
+                    rever = rever.substring(addresss + 1, rever.length());
+                    phones = rever.indexOf("→");
+                    String phone = rever.substring(0, phones);
+                    rever = rever.substring(phones + 1, rever.length());
+                    khhs = rever.indexOf(" ");
+                    String khh = rever.substring(1, khhs);
+                    rever = rever.substring(khhs + 1, rever.length());
+                    yhzhs = rever.indexOf("→");
+                    String yhzh = rever.substring(0, yhzhs);
+                    rever = rever.substring(yhzhs + 1, rever.length());
+                    keys = rever.indexOf("→");
+                    String key = rever.substring(0, keys);
+                    String userId = "";
+                    if (CustomApplication.isLogin) {
+                        userId = CustomApplication.userId;
+                    }
+                    final String url = QRUtil.createString(
+                            key,
+                            userId,
+                            name,
+
+                            nsrsbh,
+                            address,
+                            phone,
+                            khh,
+                            yhzh
+                    );
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String s = TcpClient.tcp(url, CustomApplication.ip);
+                            Message message = new Message();
+                            message.obj = s;
+                            handlers.sendMessage(message);
+                            //發送請求在這裡
+                        }
+                    }).start();
+                }
+            } else {
                 String str1 = QRUtil.replaceBlank(rever.substring(rever.length() - 3, rever.length()));
                 rever = QRUtil.replaceBlank(str1 + rever.substring(0, rever.length() - 3));
                 String str2 = QRUtil.replaceBlank(rever.substring(rever.length() - 3, rever.length()));
@@ -757,17 +829,16 @@ public final class CaptureActivity extends Activity implements
                 } else {
                     DialogHb.showdialogclick(CaptureActivity.this, "请扫描正确的二维码");
                 }
-            } else if (what == ScanIp) {
-                Intent intent = new Intent();
-                intent.putExtra("content", content);
-                setResult(RESULT_OK, intent);
-                finish();
+            }
+        } else if (what == ScanIp) {
+            Intent intent = new Intent();
+            intent.putExtra("content", content);
+            setResult(RESULT_OK, intent);
+            finish();
         }
-
     }
 
     ;
-
 
     /**
      * 生成六位随机字符串
@@ -788,20 +859,6 @@ public final class CaptureActivity extends Activity implements
         }
         return new String(randBuffer);
     }
-    private String getComById(String qyyhids, String qymcs, String nsrsbhs, String dzdhs, String yhs) {
-        String url = null;
-        JSONObject json = new JSONObject();
-        try {
-            json.put("qyyhid", qyyhids);
-            json.put("qymc", qymcs);
-            json.put("nsrsbh", nsrsbhs);
-            json.put("dzdh", dzdhs);
-            json.put("yh", yhs);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        url = json.toString();
-        url = randomString() + QRUtil.replaceBlank(Base64.encodeToString(url.getBytes(), Base64.DEFAULT)) + randomString();
-        return QRUtil.replaceBlank(Base64.encodeToString(url.getBytes(), Base64.DEFAULT));
-    }
+
+
 }

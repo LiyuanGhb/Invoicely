@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/selectstaff_contain"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/addprocess">
+
+        <TextView
+            android:id="@+id/selectstaff_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="Admin"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/selectstaff_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/selectstaff_contain"
+        android:layout_toEndOf="@+id/selectstaff_contain"
+        android:layout_alignBaseline="@+id/selectstaff_contain"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Admin"/>
+
+    <TextView
+        android:id="@+id/selectstaff_zsxm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="18981443691"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@+id/selectstaff_contain"
+        android:layout_toRightOf="@+id/selectstaff_contain"
+        android:layout_toEndOf="@+id/selectstaff_contain"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_Gray"
+        android:layout_marginLeft="90dp"
+        android:layout_below="@+id/selectstaff_zsxm"/>
+</RelativeLayout>

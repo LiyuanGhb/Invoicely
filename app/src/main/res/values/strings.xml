@@ -128,13 +128,14 @@
 
     <!--HomePageFragment-->
     <string name="Home_Delete">删除</string>
-    <string name="Home_Update">修改</string>
-    <string name="Home_Add">新增</string>
+    <string name="Home_Update">修改</string><string name="Home_open">扫描</string>
+    <string name="Home_Add">新增</string><string name="Home_qure">查看</string>
     <string name="Home_CreateCompany">创建名片</string>
     <string name="Home_createCompanyHint">您还没有名片，请创建名片.</string>
     <string name="Bottom_Info">我的信息</string>
     <string name="Bottom_Company">我的企业</string>
     <string name="Bottom_Invoice">发票管理</string>
     <string name="Bottom_Home">首页</string>
+    <string name="point">.</string>
 
 </resources>

@@ -82,7 +82,7 @@
             </RelativeLayout>
 
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_qyrz_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_mpsz_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_smqsz_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_czsm_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_fwxy_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_bbh_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
                 android:onClick="@{onClickListener}"
                 />
 
-            <com.cdhy.invoice.invoice.ui.custom.CustomContain
+            <com.dzfp.dzfp.ui.custom.CustomContain
                 android:id="@+id/info_bbgx_rl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -24,6 +24,7 @@
             <RelativeLayout
                 android:id="@+id/rl_back_current"
                 android:layout_width="70dp"
+                android:onClick="@{onCliclistener}"
                 android:layout_height="match_parent"
                 android:background="@drawable/select_bg">
 
@@ -56,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_qymc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
                     app:setDescribe="企业名称"
                     app:setDetails="绑定企业名称"/>
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_qysh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
                     app:setDescribe="税号"
                     app:setDetails="绑定税号"/>
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_qydz"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,7 +81,7 @@
                     app:setDescribe="地址"
                     app:setDetails="绑定地址"/>
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_qydh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,7 +89,7 @@
                     app:setDescribe="电话"
                     app:setDetails="电话"/>
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_khh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -96,7 +97,7 @@
                     app:setDescribe="开户行"
                     app:setDetails="绑定开户行"/>
 
-                <com.cdhy.invoice.invoice.ui.custom.CustomLinearLayout
+                <com.dzfp.dzfp.ui.custom.CustomLinearLayout
                     android:id="@+id/current_yhzh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

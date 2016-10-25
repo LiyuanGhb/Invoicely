@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardBackgroundColor="@color/light_gray"
+    card_view:cardCornerRadius="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/text_fpdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="发票代码:" />
+
+        <TextView
+            android:id="@+id/tv_fpdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/text_fpdm"
+            android:text="12345678454" />
+
+        <TextView
+            android:id="@+id/text_fphm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_fpdm"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="发票号码:" />
+
+        <TextView
+            android:id="@+id/tv_fphm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_fpdm"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/text_fphm"
+            android:text="1231231" />
+
+        <TextView
+            android:id="@+id/tv_bxje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tv_bxje"
+            android:text="报销金额:" />
+
+        <TextView
+            android:id="@+id/tv_kpsj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_bxje"
+            android:layout_marginRight="5dp"
+
+            android:layout_marginTop="5dp"
+            android:text="2016-8-15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_bxje"
+
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tv_kpsj"
+            android:text="开票时间:" />
+
+        <TextView
+            android:id="@+id/text_kpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_fphm"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="开票方:" />
+
+        <TextView
+            android:id="@+id/tv_kpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_fphm"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/text_kpf"
+            android:text="随意" />
+
+        <TextView
+            android:id="@+id/text_ghf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_kpf"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="购货方:" />
+
+        <TextView
+            android:id="@+id/tv_ghf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_kpf"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/text_ghf"
+            android:text="随意" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

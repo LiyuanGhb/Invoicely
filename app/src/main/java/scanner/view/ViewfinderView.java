@@ -15,7 +15,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.cdhy.invoice.invoice.R;
+import com.dzfp.dzfp.R;
 import com.google.zxing.ResultPoint;
 
 import java.util.ArrayList;

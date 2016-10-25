@@ -41,6 +41,7 @@
             android:layout_marginLeft="5dp"
             android:layout_toLeftOf="@+id/viewpager_contain"
             android:background="@mipmap/leftss"
+            android:onClick="@{onClickListener}"
             android:visibility="gone" />
 
         <ImageView
@@ -51,18 +52,27 @@
             android:layout_marginRight="5dp"
             android:layout_toRightOf="@+id/viewpager_contain"
             android:background="@mipmap/rightss"
+            android:onClick="@{onClickListener}"
             android:visibility="gone" />
 
 
         <LinearLayout
             android:id="@+id/home_btn_contain"
-            android:layout_width="266dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/viewpager_contain"
             android:layout_centerHorizontal="true"
             android:orientation="horizontal"
             android:visibility="gone">
-
+            <Button
+                android:id="@+id/home_btn_qure"
+                style="@style/ButtonContain"
+                android:layout_width="wrap_content"
+                android:background="@drawable/buttonblue"
+                android:onClick="@{onClickListener}"
+                android:text="@string/Home_qure" />
             <Button
                 android:id="@+id/home_btn_add"
                 style="@style/ButtonContain"
@@ -84,6 +94,12 @@
                 android:layout_width="wrap_content"
                 android:onClick="@{onClickListener}"
                 android:text="@string/Home_Delete" />
+            <Button
+                android:id="@+id/home_btn_open"
+                style="@style/ButtonContain"
+                android:layout_width="wrap_content"
+                android:onClick="@{onClickListener}"
+                android:text="@string/Home_open" />
         </LinearLayout>
 
         <Button

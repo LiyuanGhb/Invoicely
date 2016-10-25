@@ -26,7 +26,8 @@ import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.cdhy.invoice.invoice.R;
+
+import com.dzfp.dzfp.R;
 
 import java.io.IOException;
 
